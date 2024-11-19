@@ -1,0 +1,38 @@
+.checkbox-input {
+  position: absolute;
+  left: 0;
+  opacity: 0.01;
+  margin-bottom: 16px;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000000;
+  background: #FFFFFF;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox-input + label {
+  display: block;
+}
+
+.checkbox-input:checked + label > .checkbox-icon {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.checkbox-input:not(:checked) + label svg {
+  opacity: 0;
+}
+
+.checkbox-input:checked + label svg {
+  opacity: 1;
+}
+
+.checkbox-input:focus-visible + label > .checkbox-icon {
+  outline-offset: 2px;
+  outline: 2px solid #0200F6;
+}
